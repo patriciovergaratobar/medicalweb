@@ -124,6 +124,7 @@
     color: rgb(81, 91, 109) !important;
 }
 
+
 @media (prefers-color-scheme: dark) {
     .BDTLL_Search_Popup {
         background-color: rgb(56, 67, 87) !important;
@@ -203,7 +204,7 @@
                 <h1 class="mbr-section-title mbr-fonts-style mb-3 display-1"><strong>CARDIOLOGÍA EN TU HOGAR</strong></h1>
                 <h2 class="mbr-section-subtitle mbr-fonts-style mb-3 display-5">Servicio de exámenes cardiológicos a domicilio*</h2>
                 <p class="mbr-text mbr-fonts-style display-7">Las enfermedades cardiovasculares son la causa número uno de muerte en Chile y en el mundo. Los pacientes que las padecen necesitan ayuda, pero asistir a un centro médico los expone al contagio.<br><br>Queremos ayudarte a cuidar tu corazón a pesar de la pandemia.<br><br></p>
-                <div class="mbr-section-btn mt-3"><a class="btn btn-primary display-4" href="#escribenos">QUIERO AGENDAR UNA HORA</a>  <a class="btn btn-success display-4" href="#c19">CONOZCA NUESTRAS MEDIDAS COVID-19</a></div>
+                <div class="mbr-section-btn mt-3"><a class="btn btn-primary display-4" href="#escribenos">QUIERO AGENDAR UNA HORA</a>  <!--a class="btn btn-success display-4" href="#c19">CONOZCA NUESTRAS MEDIDAS COVID-19</a></div-->
                 <p class="mbr-text mbr-fonts-style display-7"><br><br>*<em>Contamos con cobertura en la mayoría de las comunas de la <strong>PROVINCIA DE SANTIAGO </strong>en la <strong>REGIÓN METROPOLITANA.</strong><br></p>
             </div>
         </div>
@@ -617,6 +618,24 @@ LE RESPONDEREMOS A LA BREVEDAD</div>
         </div>
       </div> 
       <input id="Direccion-escribenos" name="Direccion" placeholder="Calle, número, depto, comuna" type="text" class="form-control" data-form-field="">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="agenda-escribenos">¿QUIERES AGENDAR UNA VISITA?</label> 
+    <div class="form-check">
+        <input  class="form-check-input" onchange="(event.target.checked) ? document.getElementById('contenedorTiempo').style.display= '' : document.getElementById('contenedorTiempo').style.display= 'none'" type="checkbox" id="flexCheckChecked" >
+        <label class="form-check-label" for="flexCheckChecked">
+          Si, quiero agendar
+        </label>
+      </div>
+    <div class="input-group" id="contenedorTiempo">
+      <div class="input-group-prepend">
+        <div class="input-group-text">
+          <i class="fa fa-crosshairs"></i>
+        </div>
+      </div> 
+      <input id="agenda-escribenos" name="agenda"  type="date" class="form-control tiempo" data-form-field="">
+      <input id="hora-escribenos" name="hora"  type="time" class="form-control tiempo" data-form-field="">
     </div>
   </div>
   <div class="form-group">
